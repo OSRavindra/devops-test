@@ -4,13 +4,11 @@ This is a simple implementation of dockerized app exposed via an ALB. The entire
 ## About Terragrunt
 Terragrunt is wrapper around terraform
 ## AWS Components created
-* [x] VPC
-* [x] public subnets
-* [x] private subnets
-* [x] Internet gateway
-* [x] NAT gateway
-* [x] ALB
-* [x] ECS and ECR
-* [x] Cloudwatch logs
-* []  R53 record
-* [] SSL for HTTPS implelementation
+* [] VPC
+* [] public subnets
+* [] private subnets
+* [] Internet gateway
+* [] NAT gateway
+* [] ALB
+* [] ECS and ECR
+* [] Cloudwatch logs
