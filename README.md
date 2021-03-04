@@ -19,7 +19,8 @@ Terragrunt is wrapper around terraform, it helps in keeping terraform code DRY a
 - [x] Create S3 Bucket
 - [x] set AWS keys
 
-```Provision Infra
+## Provision Infra
+```
 export TF_VAR_ENV=dev
 export TF_VAR_AWS_REGION=<aws_region>
 export TF_STATE_BUCKET=<S3 Bucket>
