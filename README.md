@@ -31,4 +31,13 @@ cd ./ci/
 terragrunt apply-all/plan-all/destroy-all
 ```
 
+## For provisioning indiviaual modules
+```
+export TF_VAR_ENV=dev
+export TF_VAR_AWS_REGION=<aws_region>
+export TF_STATE_BUCKET=<S3 Bucket>
+cd ./ci/network
+terragrunt apply/plan/destroy
+```
+
 
