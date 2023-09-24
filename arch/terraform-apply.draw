@@ -1,0 +1,27 @@
+graph TB
+  U["User"] -- "terraform apply" --> T["Terraform"]
+  T -- "Reads" --> CF["Current State File"]
+  T -- "Reads" --> TF["Terraform Configuration"]
+  T -- "Queries" --> RP["Resource Provider APIs"]
+  subgraph C["Comparison"]
+    CF -- "Compare" --> D["Differences"]
+    TF -- "Compare" --> D
+    RP -- "Compare" --> D
+  end
+  D -- "Generate Plan" --> P["Execution Plan"]
+  P -- "User Approval" --> UA["User Approval"]
+  UA -- "Execute Plan" --> EP["Execute Plan"]
+  EP -- "Update" --> CF
+  EP -- "Apply Changes" --> RP
+  linkStyle 0 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 1 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 2 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 3 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 4 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 5 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 6 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 7 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 8 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 9 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 10 stroke:#2ecd71,stroke-width:2px;
+  linkStyle 11 stroke:#2ecd71,stroke-width:2px;
