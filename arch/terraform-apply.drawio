@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net" modified="2023-09-24T12:55:19.377Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.81" etag="-jLTx7RrwwUaXAqAoQL8" version="21.8.2" type="device">
+  <diagram name="Page-1" id="3n_O-v0YSFQvjrABO9So">
+    <mxGraphModel dx="982" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-1" value="User" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="150" height="838" as="geometry" />
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-2" value="Terraform CLI" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="150" height="838" as="geometry" />
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-3" value="State File" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="430" y="20" width="150" height="838" as="geometry" />
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-4" value="Cloud Provider" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=65;" vertex="1" parent="1">
+          <mxGeometry x="630" y="20" width="150" height="838" as="geometry" />
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-5" value="terraform apply" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-1" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="129" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-6" value="Read current state" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="183" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-7" value="Return current state" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-3" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-8" value="Query current infrastructure" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="291" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-9" value="Return current infrastructure" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-4" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="345" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-10" value="Compare desired vs current state" style="curved=1;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="345" y="399" />
+              <mxPoint x="345" y="429" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-11" value="Show plan" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="483" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-12" value="Confirm apply" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-1" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="537" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-13" value="Update state" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="591" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-14" value="Apply changes" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="645" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-15" value="Confirm changes" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;dashed=1;dashPattern=2 3;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-4" target="2dwUKAjd4GYzkPYO_aCD-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="699" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2dwUKAjd4GYzkPYO_aCD-16" value="Apply complete" style="verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="2dwUKAjd4GYzkPYO_aCD-2" target="2dwUKAjd4GYzkPYO_aCD-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="753" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
